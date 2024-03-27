@@ -23,7 +23,7 @@ def setup_environment(env, num_rules):
 def generate_rules(env, num_rules):
     for i in range(1, num_rules+1):  # Generates num_rules rules
         next_step = i + 1
-        next_status = f"process-{next_step}" if i < 100 else "final"
+        next_status = f"process-{next_step}"
         rule_string = f"""
         (defrule step{i}
             ?animal <- (animal (step {i}))
